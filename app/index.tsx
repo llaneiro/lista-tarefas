@@ -41,32 +41,14 @@ export default function HomeScreen() {
     );
   }
 
-  // ─────────────────────────────────────────────────────────────────────────
-  // RENDERIZAÇÃO PRINCIPAL
-  // ─────────────────────────────────────────────────────────────────────────
-
   return (
     <>
       <Stack.Screen
         options={{
           headerRight: () => (
-            <View className="flex-row gap-4">
-              <TouchableOpacity
-                onPress={() => router.push('/profile')}
-                accessibilityLabel="Abrir perfil"
-                accessibilityRole="button"
-              >
-                <Text className="text-3xl">👤</Text>
-              </TouchableOpacity>
-
-              <TouchableOpacity
-                // onPress={signOut}
-                accessibilityLabel="Sair"
-                accessibilityRole="button"
-              >
-                <Text className="text-3xl">🚪</Text>
-              </TouchableOpacity>
-            </View>
+            <TouchableOpacity onPress={() => router.push('/profile')}>
+              <Text className="text-3xl">👤</Text>
+            </TouchableOpacity>
           ),
         }}
       />
